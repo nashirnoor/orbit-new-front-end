@@ -122,7 +122,7 @@ import React, { useContext, useEffect, useState } from "react";
 import { Link, useParams } from "react-router-dom";
 import { CartContext } from "../../Context/CartContext";
 import { ToastContainer, toast } from "react-toastify";
-import { baseurl } from "../../constants";
+import { baseurl,baseurlimg } from "../../constants";
 import Breadcrumb from "../Breadcrumbs/Breadcrumbs";
 import Loading from "../Loading/Loading";
 import "./ProductList.css";
@@ -184,7 +184,7 @@ const ProductListing = () => {
                     className="product-card"
                   >
                     <img
-                      src={baseurl + product.image}
+                      src={baseurlimg + product.image}
                       alt={product.name}
                       className="product-image"
                     />
@@ -219,7 +219,7 @@ const ProductListing = () => {
                 className="product-card"
               >
                 <img
-                  src={baseurl + product.image}
+                  src={baseurlimg + product.image}
                   alt={product.name}
                   className="product-image"
                 />

@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { Link, useLocation } from "react-router-dom";
-import { baseurl } from "../../constants";
+import { baseurl,baseurlimg } from "../../constants";
 import { motion } from "framer-motion";
 import Breadcrumb from "../Breadcrumbs/Breadcrumbs";
 import { Row } from "react-bootstrap";
@@ -49,7 +49,7 @@ const ProductCategories = () => {
               className="product-category__card"
             >
               <img
-                src={baseurl + category.image}
+                src={baseurlimg + category.image}
                 alt=""
                 style={{
                   width: "200px",

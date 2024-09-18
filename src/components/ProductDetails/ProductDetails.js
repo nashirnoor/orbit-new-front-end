@@ -1,6 +1,6 @@
 import React, { useContext, useEffect, useState } from "react";
 import { Link, useParams } from "react-router-dom";
-import { baseurl } from "../../constants";
+import { baseurl,baseurlimg } from "../../constants";
 import Breadcrumb from "../Breadcrumbs/Breadcrumbs";
 import Loading from "../Loading/Loading";
 import { toast, ToastContainer } from "react-toastify";
@@ -38,7 +38,7 @@ function ProductDetails() {
       <Breadcrumb style={{ paddingTop: "130px", paddingLeft: "35px" }} />
       <div className="main-container" style={{ paddingTop: "130px" }}>
         <ToastContainer />
-        <img src={baseurl + product.image} className="image" alt={product.name} />
+        <img src={baseurlimg + product.image} className="image" alt={product.name} />
         <div className="details">
           <h2 className="name">{product.name}</h2>
           <p className="p">
@@ -81,7 +81,7 @@ function ProductDetails() {
                 className="product-card"
               >
                 <img
-                  src={baseurl + related_product.image}
+                  src={baseurlimg + related_product.image}
                   alt={related_product.name}
                   className="product-image"
                 />

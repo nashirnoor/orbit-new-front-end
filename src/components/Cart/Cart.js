@@ -2,7 +2,7 @@ import React, { useContext, useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { FaTrash } from "react-icons/fa6";
 import { ToastContainer, toast } from "react-toastify";
-import { baseurl } from "../../constants";
+import { baseurl,baseurlimg } from "../../constants";
 import Breadcrumb from "../Breadcrumbs/Breadcrumbs";
 import { CartContext } from "../../Context/CartContext";
 import "react-toastify/dist/ReactToastify.css";
@@ -172,7 +172,7 @@ const Cart = () => {
               {cartItems.map((item, index) => (
                 <div key={index} className="cart-item">
                   <img
-                    src={baseurl + item.image}
+                    src={baseurlimg + item.image}
                     alt={item.name}
                     className="cart-item-image"
                   />
